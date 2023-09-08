@@ -18,7 +18,7 @@ if (lastDigit > 5)
 {
 printf("greater than 5\n");
 }
-else if (lastDigit == 0) 
+else if (lastDigit == 0)
 {
 printf("0\n");
 }
