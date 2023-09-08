@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include <time.h>
 
-int main() {
+int main(void) {
     srand(time(NULL)); 
-    int n = rand() % (2 * RAND_MAX) - RAND_MAX;
+    int n = rand();
     printf("The number %d is ", n);
     if (n > 0) {
         printf("positive");
