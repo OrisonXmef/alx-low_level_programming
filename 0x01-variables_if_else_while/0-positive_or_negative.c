@@ -5,8 +5,7 @@ int main(void) {
   int n;
   srand(time(NULL));
     n = rand() - RAND_MAX / 2;
-    while (n)
-    {
+   
     printf("%d is ", n);
     if (n > 0) {
         printf("positive\n");
@@ -17,7 +16,7 @@ int main(void) {
     else {
         printf("negative\n");
     }
-   }
+  
     printf("\n");
 
     return (0);
