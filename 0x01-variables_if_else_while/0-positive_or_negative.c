@@ -5,7 +5,7 @@
 int main(void) {
   int n;
     srand(time(NULL)); 
-   n = rand()
+   n = rand();
     while (n)
     {
     printf("The number %d is ", n);
