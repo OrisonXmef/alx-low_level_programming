@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+
 int main(void) {
-  int n;
+int n;
   srand(time(NULL));
     n = rand() - RAND_MAX / 2;
    
@@ -17,7 +18,5 @@ int main(void) {
         printf("negative\n");
     }
   
-    printf("\n");
-
-    return (0);
+     return (0);
 }
