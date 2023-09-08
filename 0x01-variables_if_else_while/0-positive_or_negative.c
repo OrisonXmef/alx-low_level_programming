@@ -3,9 +3,10 @@
 #include <time.h>
 
 int main(void) {
+  int n;
     srand(time(NULL)); 
-    int n;
-    n = rand();
+    while (n = rand())
+    {
     printf("The number %d is ", n);
     if (n > 0) {
         printf("positive");
@@ -14,8 +15,8 @@ int main(void) {
     } else {
         printf("negative");
     }
-
+    }
     printf("\n");
 
-    return 0;
+    return (0);
 }
