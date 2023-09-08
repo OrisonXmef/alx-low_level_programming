@@ -4,8 +4,7 @@
 int main(void) {
   int n;
   srand(time(NULL));
-   int n = rand() - RAND_MAX / 2;
-   n = rand();
+    n = rand() - RAND_MAX / 2;
     while (n)
     {
     printf("The number %d is ", n);
