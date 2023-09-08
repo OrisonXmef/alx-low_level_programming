@@ -6,12 +6,12 @@
  */
 int main(void)
 {
-putchar('0'); // Print the first digit
-for (int i = 1; i < 10; i++) {
-putchar(','); // Print the separator
-putchar(' '); // Print the space
-putchar(i + '0'); // Print the next digit
+putchar('0');
+for (i = 1; i < 10; i++) {
+putchar(',');
+putchar(' ');
+putchar(i + '0');
 }
-putchar('\n'); // Print a new line
+putchar('\n');
 return (0);
 }
