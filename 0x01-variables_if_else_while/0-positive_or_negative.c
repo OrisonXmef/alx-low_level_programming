@@ -3,12 +3,9 @@
 #include <time.h>
 
 int main() {
-    srand(time(NULL)); // Seed the random number generator
-
-    int n = rand() % (2 * RAND_MAX) - RAND_MAX; // Generate a random number
-
+    srand(time(NULL)); 
+    int n = rand() % (2 * RAND_MAX) - RAND_MAX;
     printf("The number %d is ", n);
-
     if (n > 0) {
         printf("positive");
     } else if (n == 0) {
