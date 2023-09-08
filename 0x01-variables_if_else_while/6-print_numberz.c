@@ -5,8 +5,7 @@
 /* betty style doc for function main goes there */
 int main(void)
 {
-putchar(48);
-putchar(49);
+putchar(48), (49);
 putchar('\n');
 return (0);
 }
