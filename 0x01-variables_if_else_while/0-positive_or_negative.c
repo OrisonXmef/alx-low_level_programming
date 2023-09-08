@@ -4,7 +4,8 @@
 
 int main(void) {
     srand(time(NULL)); 
-    int n = rand();
+    int n;
+    n = rand();
     printf("The number %d is ", n);
     if (n > 0) {
         printf("positive");
