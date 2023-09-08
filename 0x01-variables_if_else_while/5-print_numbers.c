@@ -9,7 +9,6 @@ int i;
 for (i = 0; i < 10; i++) 
 putchar('0' + i);
 
-putchar('\n'); // Print a new line
-
+putchar('\n');
 return 0;
 }
