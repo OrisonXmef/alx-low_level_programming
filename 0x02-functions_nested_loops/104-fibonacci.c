@@ -10,9 +10,10 @@ int main(void)
 	int i;
 	unsigned int term1 = 1;
 	unsigned int term2 = 2;
+
 	printf("%u, %u", term1, term2);
 
-	for (i = 0; i < x; i++)
+	for (i = 0; i <= x; i++)
 	{
 		unsigned int Currentterm = term1 + term2;
 
