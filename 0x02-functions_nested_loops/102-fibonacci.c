@@ -10,7 +10,6 @@ int main(void)
 	int n = 50;
 	int i;
 	unsigned long int *fib = (unsigned long *)malloc(n * sizeof(unsigned long));
-	
 	if (fib == NULL)
 	{
             perror("Memmory allocation failed");
@@ -27,7 +26,6 @@ int main(void)
         for (i = 0; i < n; i++)
 	{
         printf("%lu", fib[i]);
-        
 	if (i < n - 1)
         {
             printf(", ");
