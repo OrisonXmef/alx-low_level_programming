@@ -28,12 +28,10 @@ int main(void)
         printf("%lu", fib[i]);
 	if (i < n - 1)
         {
-            printf(", ");
-        
+		printf(", ");   
 	}
 	}
-    printf("\n");
-    free(fib);
-
-    return (0);
+	printf("\n");
+	free(fib);
+	return (0);
 }
