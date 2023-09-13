@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	int x = 198;
+	int x = 118;
 	int i;
 	unsigned int term1 = 1;
 	unsigned int term2 = 2;
