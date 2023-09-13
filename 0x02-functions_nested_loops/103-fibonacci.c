@@ -1,8 +1,8 @@
 #include <stdio.h>
-
 /**
- * print_to_98 - Prints all natural numbers from n to 98
- * @n: The starting number
+ * main - Entry point of the program
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
@@ -13,14 +13,14 @@ int main(void)
 
 	while (term1 <= 4000000)
 	{
-		if (term1 %2 == 0) 
-		{ 
+		if (term1 % 2 == 0)
+		{
 			total += term1;
 		}
-		currentterm = term1 + term2; 
-		term1 = term2; 
+		currentterm = term1 + term2;
+		term1 = term2;
 		term2 = currentterm;
 	}
 	printf("%lu\n", total);
-	return 0;
+	return (0);
 }
