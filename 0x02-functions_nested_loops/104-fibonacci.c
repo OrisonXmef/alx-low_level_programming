@@ -12,7 +12,7 @@ int main(void)
 	unsigned int T2 = 2;
 	printf("%u, %u", T1, T2);
 	
-	for (i = 2; i < n; i++)
+	for (i = 2; i < x; i++)
 	{
 		unsigned int Currentterm = T1 + T2;
 		printf(", %u", Currentterm);
