@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * main - Entry point of the program
  *
@@ -7,7 +8,11 @@
 int main(void) {
     int n = 50;
     int i;
-    unsigned long int fib[n];
+    unsigned long int *fib = (unsigned long *)malloc(n * sizeof(unsigned long));
+    if (fib == NULL) 
+    {
+	    perror("Memmory allocation failed");
+	    return (1);
 
     fib[0] = 1;
     fib[1] = 2;
@@ -17,12 +22,14 @@ int main(void) {
     }
 	for (i = 0; i < n; i++) {
         printf("%lu", fib[i]);
-        if (i < n - 1) {
+        if (i < n - 1)
+	{
             printf(", ");
         }
     }
 
     printf("\n");
+    free(fib);
 
     return (0);
 }
