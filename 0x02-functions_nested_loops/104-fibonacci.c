@@ -8,16 +8,17 @@ int main(void)
 {
 	int x = 98;
 	int i;
-	unsigned int T1 = 1;
-	unsigned int T2 = 2;
+	unsigned int term1 = 1;
+	unsigned int term2 = 2;
 	printf("%u, %u", T1, T2);
 	
 	for (i = 2; i < x; i++)
 	{
-		unsigned int Currentterm = T1 + T2;
+		unsigned int Currentterm = term1 + term2;
+		
 		printf(", %u", Currentterm);
-		T1 = T2;
-		T2 = Currentterm;
+		term1 = term2;
+		term2 = Currentterm;
 	}
 	printf("\n");
 	return (0);
