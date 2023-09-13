@@ -15,12 +15,12 @@ int main(void)
 	{
 		if (term1 %2 == 0) 
 		{ 
-			sum += term1;
+			total += term1;
 		}
 		currentterm = term1 + term2; 
 		term1 = term2; 
 		term2 = currentterm;
 	}
-	printf("%lu\n", sum);
+	printf("%lu\n", total);
 	return 0;
 }
