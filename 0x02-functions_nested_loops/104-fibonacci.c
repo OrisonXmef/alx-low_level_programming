@@ -13,7 +13,7 @@ int main(void)
 
 	printf("%u, %u", term1, term2);
 
-	for (i = 1; i < x; i++)
+	for (i = 2; i < x; i++)
 	{
 		unsigned int Currentterm = term1 + term2;
 
