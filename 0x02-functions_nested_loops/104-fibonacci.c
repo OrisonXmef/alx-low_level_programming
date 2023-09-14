@@ -9,7 +9,7 @@ int main(void)
 	int x = 122;
 	int i;
 	unsigned int term1 = 1;
-	unsigned int term2 = 2;
+	unsigned int term2 = 3;
 
 	printf("%u, %u", term1, term2);
 
