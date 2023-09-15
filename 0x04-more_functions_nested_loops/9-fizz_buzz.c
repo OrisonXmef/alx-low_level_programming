@@ -1,7 +1,14 @@
 #include <stdio.h>
+
 /**
- * print_square - Prints a square of '#' characters
- * @size: The size of the square
+ * main - Entry point for the FizzBuzz program
+ *
+ * Description:
+ * The program prints numbers from 1 to 100, replace multiples of 3 with "Fizz"
+ * multiples of 5 with "Buzz," and multiples of both 3 and 5 with "FizzBuzz."
+ *
+ * Return:
+ * 0 (Success) - This program returns 0 upon successful execution.
  */
 int main(void)
 {
@@ -25,7 +32,7 @@ int main(void)
 		{
 			printf("%d", i);
 		}
-		
+
 		if (i < 100)
 		{
 			printf(" ");
