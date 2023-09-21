@@ -8,40 +8,16 @@
  */
 char *rot13(char *str)
 {
-	char *ptr = str;
-	char alpha_upper[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	char alpha_lower[] = "abcdefghijklmnopqrstuvwxyz";
+	char *start = str;
+	char rot13_table[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	while (*ptr)
+	while (*str)
 	{
-		char *lower = alpha_lower;
-		char *upper = alpha_upper;
-
-		if (*ptr >= 'a' && *ptr <= 'z')
+		if ((*str >= 'A' && *str <= 'Z') || (*str >= 'a' && *str <= 'z'))
 		{
-			while (*lower)
-			{
-				if (*ptr == *lower)
-				{
-					*ptr = (lower - alpha_lower + 13) % 26 + 'a';
-					break;
-				}
-				lower++;
-			}
+			*str = rot13_table[*str - ((*str >= 'a') ? 'a' : 'A')];
 		}
-		else if (*ptr >= 'A' && *ptr <= 'Z')
-		{
-			while (*upper)
-			{
-				if (*ptr == *upper)
-				{
-					*ptr = (upper - alpha_upper + 13) % 26 + 'A';
-					break;
-				}
-				upper++;
-			}
-		}
-		ptr++;
+		str++;
 	}
-	return (str);
+	return (start);
 }
