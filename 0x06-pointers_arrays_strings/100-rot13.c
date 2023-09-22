@@ -2,22 +2,29 @@
 #include <stdio.h>
 
 /**
- * rot13 - encodes a string using ROT13
- * @str: the input string
- * Return: a pointer to the resulting encoded string
+ * rot13 - Encodes a string using ROT13 substitution.
+ * @s: The input string to be encoded.
+ *
+ * Return: A pointer to the resulting encoded string.
  */
-char *rot13(char *str)
-{
-	char *start = str;
-	char rot13_table[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	while (*str)
+char *rot13(char *s)
+{
+	int i = 0, j;
+	char a[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char b[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+
+	while (s[i] != '\0')
 	{
-		if ((*str >= 'A' && *str <= 'Z') || (*str >= 'a' && *str <= 'z'))
+		for (j = 0; a[j] != '\0'; j++)
 		{
-			*str = rot13_table[*str - ((*str >= 'a') ? 'a' : 'A')];
+			if (s[i] == a[j])
+			{
+				s[i] = b[j];
+				break;
+			}
 		}
-		str++;
+		i++;
 	}
-	return (start);
+	return (s);
 }
