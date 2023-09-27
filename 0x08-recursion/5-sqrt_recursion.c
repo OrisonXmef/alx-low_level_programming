@@ -4,6 +4,7 @@
 /**
  * _sqrt_recursion - Returns the natural square root of a number.
  * @n: The number to calculate the square root for.
+ * @i: The current candidate for the square root.
  *
  * Return: The natural square root of n, or -1 if it doesn't have a natural
  * square root.
