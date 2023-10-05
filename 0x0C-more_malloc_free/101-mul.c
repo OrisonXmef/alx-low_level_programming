@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include <gmp.h>
 
 /**
  * multiply - Multiplies two positive integers.
@@ -9,9 +10,24 @@
  *
  * Return: The result of the multiplication.
  */
-unsigned int multiply(unsigned int num1, unsigned int num2)
+void multiply(const char *str1, const char *str2)
 {
-	return (num1 * num2);
+	mpz_t num1, num2, result;
+
+	mpz_init(num1);
+	mpz_init(num2);
+	mpz_init(result);
+
+	mpz_set_str(num1, str1, 10);
+	mpz_set_str(num2, str2, 10);
+
+	mpz_mul(result, num1, num2);
+
+	gmp_printf("%Zd\n", result);
+
+	mpz_clear(num1);
+	mpz_clear(num2);
+	mpz_clear(result);
 }
 
 /**
@@ -40,10 +56,6 @@ int is_positive_number(const char *str)
  */
 int main(int argc, char *argv[])
 {
-	unsigned int num1;
-	unsigned int num2;
-	unsigned int result;
-
 	if (argc != 3)
 	{
 		printf("Error\n");
@@ -54,10 +66,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (98);
 	}
-	num1 = atoi(argv[1]);
-	num2 = atoi(argv[2]);
-	result = multiply(num1, num2);
-	printf("%u\n", result);
+	multiply(argv[1], argv[2]);
 	return (0);
 }
 
