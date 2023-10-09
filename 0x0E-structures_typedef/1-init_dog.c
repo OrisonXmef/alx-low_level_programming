@@ -1,17 +1,13 @@
+#include "dog.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include "dog.h"
 
 /**
- * @brief Initializes a struct dog with the provided values.
- *
- * This function initialize a struct dog with the provided values for name, age
- * and owna. The struct dog pointa 'd' should point to a valid memory location.
- *
- * @param d     Pointer to the struct dog to be initialized.
- * @param name  Name of the dog.
- * @param age   Age of the dog.
- * @param owner Owner of the dog.
+ * init_dog - Initializes a struct dog with the provided values.
+ * @d: Pointer to the struct dog to be initialized.
+ * @name: Name of the dog.
+ * @age: Age of the dog.
+ * @owner: Owner of the dog.
  */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
