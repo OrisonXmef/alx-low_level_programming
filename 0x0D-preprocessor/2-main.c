@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 /**
  * main - Entry point of the program.
@@ -11,7 +12,20 @@
 
 int main(void)
 {
-	printf("Compiled from file: %s\n", __FILE__);
+	const char *file = __FILE__;
+	const char *name = strrchr(file, '/');
+
+	file = __FILE__;
+	name = strrchr(file, '/');
+	if (name == NULL)
+	{
+		name = file;
+	}
+	else
+	{
+		name++;
+	}
+	printf("%s\n", name);
 
 	return (0);
 }
